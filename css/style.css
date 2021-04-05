@@ -1,0 +1,248 @@
+/*  ********** GENERAL STYLE ELEMENTS AND SETTINGS ********** */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* { box-sizing: border-box; } /* We zetten property "border-box" op ALLE elementen */
+
+body, .bdabout, .bdproj, .bdcontact {
+    font-family: 'Open Sans', sans-serif;
+    background-size: cover;
+    text-align: justify;
+    color: white;
+    overflow: auto;
+}
+
+.indexwrapper, .abravatar, .iconbar, .artwrapper, .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Horizontaal uitlijnen */
+}
+
+/* for index.html specific */
+body { background: url("../assets/img/index.jpg") center center; }
+
+/* Algemene wrapper gebruikt in about.html, projects.html en contact.html */
+.wrapper {
+    margin: 30px auto;
+    width: 750px;
+    overflow: auto;
+}
+
+/* Om de articles in projects.html en contact.html gelijkmatig te verdelen via space-between */
+.artwrapper {
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Wordt gebruikt in project.html en contact.html */
+article {
+    width: 48.5%;
+    height: auto;
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 20px; /* Om de articles te scheiden als ze onder elkaar staan */
+}
+
+.navigation {
+    justify-content: flex-end; /* Rechts uitlijnen */
+    height: 50px;
+    background-color: black;
+    position: relative; /* Moet erbij om overlap te vermijden bij GSM view in Landscape :$ */
+    z-index: 2;
+}
+
+a {
+    margin-right: 75px;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #1c80c1;
+}
+
+.logosmall {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    height: 110px;
+    width: 110px;
+    /* wordt enkel zichtbaar nadat de Media Query afgaat */
+    display: none;
+}
+
+.logosmall img {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 { margin-bottom: 10px; }
+
+h2 {
+    color: #1c80c1;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0 0 10px 0;
+}
+
+
+/* ********** SPECIFIC STYLE ELEMENTS FOR INDEX.HTML ********** */
+
+/* Specifieke wrapper enkel gebruikt op index.html. Centreert het ABRC logo horizontaal en verticaal */
+.indexwrapper {
+    height: calc(100% - 50px); /* 50px is de hoogte van de .navigation */
+}
+
+/* Definiteert de layout van het ABRC logo */
+.indexwrapper img {
+    width: 45%;
+    opacity: 80%;
+}
+
+
+/* ********** SPECIFIC STYLE ELEMENTS FOR ABOUT.HTML ********** */
+
+/* Specific 'body' class for about.html */
+.bdabout { background: url("../assets/img/about.jpg") center center; }
+
+.abravatar {
+    width: 50%;
+    height: auto;
+    float: left;
+    background-color: black;
+    margin-bottom: 20px; /* voor wanneer de elementen onder elkaar staan */
+}
+
+.abravatar img {
+    width: 75%;
+    padding: 40px 0 40px 0;
+}
+
+/* Wordt gebruikt in about.html */
+section {
+    width: 50%;
+    height: auto;
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 20px; /* Om de .articles te scheiden als ze onder elkaar staan */
+}
+
+.iconbar {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.iconbar a {
+    /* reset van margin-right needed */
+    margin: 0;
+}
+
+/* Iconmoon fonts */
+@font-face {
+    font-family: 'Icomoon';
+    src: url('../assets/fonts/IcoMoon.ttf') format('truetype');
+}
+
+.linkedin {font: 18px 'Open Sans', sans-serif; color: #fff;}
+.linkedin:before {font-family: 'Icomoon'; content: "\eac9";}
+
+.pdf {font: 18px 'Open Sans', sans-serif; color: #fff;}
+.pdf:before {font-family: 'Icomoon'; content: "\eadf";}
+
+.wordfile {font: 18px 'Open Sans', sans-serif; color: #fff;}
+.wordfile:before {font-family: 'Icomoon'; content: "\eae1";}
+
+.beschikbaarheid {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid red; /* On a mission */
+    //border: 1px solid orange; /* Available as of dd/mm/yyyy */
+    //border: 1px solid green; /* Immediately available */
+}
+
+
+/* ********** SPECIFIC STYLE ELEMENTS FOR PROJECTS.HTML ********** */
+
+/* Specific 'body' class for projects.html */
+.bdproj { background: url("../assets/img/projects.jpg") center center; }
+
+/* Wordt gebruikt om neon-light.jpg te tonen op projects.html */
+.banner {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+    background: url("../assets/img/neon-light.jpg") center center;
+    background-size: cover;
+}
+
+
+/* ********** SPECIFIC STYLE ELEMENTS FOR CONTACT.HTML ********** */
+
+/* Specific 'body' class for contact.html */
+.bdcontact { background: url("../assets/img/contact.jpg") center center; }
+
+
+/* ********** MEDIA QUERY - BREAKPUNT OP 750 PX ********** */
+
+@media screen and (max-width: 750px) {
+    
+    .navigation { 
+        flex-direction: column;
+        align-items: flex-start; /* CROSS axis is nu horizontaal! */
+        height: 110px;
+        padding: 10px 0 10px 20px;
+    }
+    
+    .indexwrapper, .wrapper, .header, section, .banner, article, .abravatar {
+        width: 100%;
+    }
+    
+    .banner {
+        display: none;
+    }
+    
+    .logosmall {
+        display: block;
+    }
+
+    .indexwrapper {
+        /* Height of .navigation is 110px geworden. */
+        height: calc(100% - 110px);
+    }
+         
+    .wrapper {
+        margin-top: 0;
+    }
+
+    .header {
+        padding-left: 20px;
+    }
+    
+    .artwrapper {
+        flex-direction: column;
+    }
+
+    .abravatar img {
+    width: 45%;
+    }
+
+}
