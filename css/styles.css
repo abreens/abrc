@@ -24,8 +24,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  /* --primary: #64a19d; Old Primary */
-  --primary: #1c80c1; /* ABRC Blue */
+  --primary: #64a19d;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -41,8 +40,10 @@
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* Axel Breens */
+  /* ABRC ABRC ABRC ABRC ABRC */
+  --primary: #1c80c1;
   --ABRCblue: #1c80c1;
+
 }
 
 *,
@@ -164,12 +165,14 @@ sup {
 
 a {
   color: var(--ABRCblue);
-  //color: #1c80c1;
   text-decoration: none;
   background-color: transparent;
 }
+
 a:hover {
-  color: #467370;
+  //color: #467370;
+  /* ABRC ABRC ABRC ABRC ABRC */
+  color: var(--blue);
   text-decoration: underline;
 }
 
@@ -4460,6 +4463,16 @@ input[type=button].btn-block {
 }
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+/* ABRC ABRC ABRC ABRC ABRC */
+.card-header a {
+  color: #212529;
+}
+
+/* ABRC ABRC ABRC ABRC ABRC */
+.card-header a:hover {
+    color: var(--ABRCblue)
 }
 
 .card-footer {
@@ -10214,12 +10227,14 @@ body {
   min-height: 35rem;
   padding: 15rem 0;
   //background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../assets/img/index.jpg");
-  background: url("../assets/img/index.jpg");
+  /* ABRC ABRC ABRC ABRC ABRC */
+  background: url("../assets/img/bg-index.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
+
 .masthead h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.5rem;
@@ -10276,7 +10291,7 @@ body {
 .about-section .card hr {
   border-color: var(--ABRCblue);
   border-width: 0.25rem;
-  width: 3rem;
+  width: 5rem;
 }
 .about-section .social {
   margin-top: 4rem;
@@ -10304,6 +10319,11 @@ body {
 .projects-section .featured-text {
   padding: 2rem;
 }
+.projects-section .card hr {
+  border-color: var(--ABRCblue);
+  border-width: 0.25rem;
+  width: 5rem;
+}
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
@@ -10329,7 +10349,8 @@ body {
   padding: 12rem 0;
   //background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/bg-signup.jpg");
   //background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/contact.jpg");
-  background: url("../assets/img/contact.jpg");
+  /* ABRC ABRC ABRC ABRC ABRC */
+  background: url("../assets/img/bg-contact.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
